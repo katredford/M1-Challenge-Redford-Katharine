@@ -7,12 +7,16 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="IceCreamClassDesign" />
+        <module name="CalculatorObject" />
         <module name="CustomerComposition" />
+        <module name="RPGInheritance" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="CalculatorObject" target="8" />
       <module name="CustomerComposition" target="8" />
       <module name="IceCreamClassDesign" target="8" />
+      <module name="RPGInheritance" target="8" />
     </bytecodeTargetLevel>
   </component>
 </project>

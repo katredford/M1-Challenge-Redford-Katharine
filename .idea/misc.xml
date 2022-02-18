@@ -5,6 +5,8 @@
       <list>
         <option value="$PROJECT_DIR$/CustomerComposition/pom.xml" />
         <option value="$PROJECT_DIR$/IceCreamClassDesign/pom.xml" />
+        <option value="$PROJECT_DIR$/RPGInheritance/pom.xml" />
+        <option value="$PROJECT_DIR$/CalculatorObject/pom.xml" />
       </list>
     </option>
   </component>
