@@ -100,8 +100,8 @@ For example, if the paths of your two `IceCream` classes are "com.company.factor
 - Example code to create the "factory" version of the `IceCream` class might look like:
 
 ```java
-com.company.factory.IceCream iceCream =
-        new com.company.factory.IceCream(flavor, salePrice, productionCost, productionTime, ingredients);
+IceCream iceCream =
+        new IceCream(flavor, salePrice, productionCost, productionTime, ingredients);
 ```
 
 - Example code to create the "pointofsale" version of the `IceCream` class might look like:

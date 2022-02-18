@@ -16,6 +16,10 @@ public class Address {
         this.zipcode = zipcode;
     }
 
+    public Address() {
+
+    }
+
     public String getStreet1() {
         return street1;
     }
@@ -54,5 +58,16 @@ public class Address {
 
     public void setZipcode(String zipcode) {
         this.zipcode = zipcode;
+    }
+
+    @Override
+    public String toString() {
+        return "Address{" +
+                "street1='" + street1 + '\'' +
+                ", street2='" + street2 + '\'' +
+                ", city='" + city + '\'' +
+                ", state='" + state + '\'' +
+                ", zipcode='" + zipcode + '\'' +
+                '}';
     }
 }
