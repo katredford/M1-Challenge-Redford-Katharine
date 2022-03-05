@@ -10,7 +10,7 @@ public class WarriorTest {
     Warrior claudia;
 
     @Before
-    public void setUp() throws Exception {
+    public void setUp() {
         claudia = new Warrior("claudia");
     }
 
@@ -19,6 +19,7 @@ public class WarriorTest {
         assertEquals("claudia", claudia.getName());
         assertEquals(75, claudia.getStrength());
         assertEquals(100, claudia.getHealth());
+        assertEquals(100, claudia.getStamina());
         assertEquals(50, claudia.getSpeed());
         assertEquals(10, claudia.getAttackPower());
         assertEquals(false, claudia.isArrested());

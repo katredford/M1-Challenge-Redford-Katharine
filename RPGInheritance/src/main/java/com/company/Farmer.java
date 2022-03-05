@@ -1,5 +1,7 @@
 package com.company;
 
+import java.util.Objects;
+
 public class Farmer extends Character {
 
    boolean plowing;
@@ -30,5 +32,26 @@ public class Farmer extends Character {
         return harvesting;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        if (!super.equals(o)) return false;
+        Farmer farmer = (Farmer) o;
+        return plowing == farmer.plowing && harvesting == farmer.harvesting;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(super.hashCode(), plowing, harvesting);
+    }
+
+    @Override
+    public String toString() {
+        return "Farmer{" +
+                "plowing=" + plowing +
+                ", harvesting=" + harvesting +
+                '}';
+    }
 }
 

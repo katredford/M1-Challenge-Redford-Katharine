@@ -2,20 +2,20 @@ package com.company;
 
 public class Warrior extends Character{
 
-    private int shieldStrength;
+    private int shieldPoints;
 
     public Warrior(String name) {
         super(name, 75,100,100,50,10, false, false);
-        this.shieldStrength = 100;
+        this.shieldPoints = 100;
     }
 
-    public void decreaseShieldStrength(int amount) {
+    public void looseShieldPoints(Integer points) {
 
-        this.shieldStrength -= amount;
+        this.shieldPoints -= points;
     }
 
-    public int getShieldStrength() {
+    public int shieldPower() {
 
-        return shieldStrength;
+        return shieldPoints;
     }
 }

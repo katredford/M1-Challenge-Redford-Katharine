@@ -1,5 +1,7 @@
 package com.company;
 
+import java.util.Objects;
+
 public class Character {
     private String name;
     private int strength;
@@ -94,6 +96,19 @@ public class Character {
 
     public int getAttackPower() {
         return attackPower;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Character character = (Character) o;
+        return strength == character.strength && health == character.health && stamina == character.stamina && speed == character.speed && attackPower == character.attackPower && arrested == character.arrested && running == character.running && Objects.equals(name, character.name);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, strength, health, stamina, speed, attackPower, arrested, running);
     }
 
     @Override

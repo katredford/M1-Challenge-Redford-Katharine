@@ -1,11 +1,15 @@
 package com.company;
 
+import java.util.Objects;
+
 public class Customer {
+
 
     private String firstName;
     private String lastName;
     private String email;
     private String phoneNumber;
+
 
     private Address shippingAddress;
     private Address billingAddress;
@@ -69,7 +73,29 @@ public class Customer {
     }
 
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Customer customer = (Customer) o;
+        return rewardsMember == customer.rewardsMember && Objects.equals(firstName, customer.firstName) && Objects.equals(lastName, customer.lastName) && Objects.equals(email, customer.email) && Objects.equals(phoneNumber, customer.phoneNumber) && Objects.equals(shippingAddress, customer.shippingAddress) && Objects.equals(billingAddress, customer.billingAddress);
+    }
 
+    @Override
+    public int hashCode() {
+        return Objects.hash(firstName, lastName, email, phoneNumber, shippingAddress, billingAddress, rewardsMember);
+    }
 
-
+    @Override
+    public String toString() {
+        return "Customer{" +
+                "firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", email='" + email + '\'' +
+                ", phoneNumber='" + phoneNumber + '\'' +
+                ", shippingAddress=" + shippingAddress +
+                ", billingAddress=" + billingAddress +
+                ", rewardsMember=" + rewardsMember +
+                '}';
+    }
 }

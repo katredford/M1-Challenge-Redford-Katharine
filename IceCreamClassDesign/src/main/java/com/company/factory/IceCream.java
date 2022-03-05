@@ -1,5 +1,8 @@
 package com.company.factory;
 
+import java.util.Arrays;
+import java.util.Objects;
+
 public class IceCream {
 
     private String flavor;
@@ -60,6 +63,32 @@ public class IceCream {
         double profit = salePrice - productionCost;
         System.out.println("we make $" + profit + " per unit");
         return profit;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        IceCream iceCream = (IceCream) o;
+        return Double.compare(iceCream.salePrice, salePrice) == 0 && Double.compare(iceCream.productionCost, productionCost) == 0 && productionTime == iceCream.productionTime && Objects.equals(flavor, iceCream.flavor) && Arrays.equals(ingredients, iceCream.ingredients);
+    }
+
+    @Override
+    public int hashCode() {
+        int result = Objects.hash(flavor, salePrice, productionCost, productionTime);
+        result = 31 * result + Arrays.hashCode(ingredients);
+        return result;
+    }
+
+    @Override
+    public String toString() {
+        return "IceCream{" +
+                "flavor='" + flavor + '\'' +
+                ", salePrice=" + salePrice +
+                ", productionCost=" + productionCost +
+                ", productionTime=" + productionTime +
+                ", ingredients=" + Arrays.toString(ingredients) +
+                '}';
     }
 }
 
